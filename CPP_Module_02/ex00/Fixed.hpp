@@ -7,7 +7,7 @@ class Fixed
 {
 	private:
 		int	_value;
-		static const int fractions = 8;
+		static const int _fractions = 8;
 	public:
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw);
