@@ -17,6 +17,9 @@ $(OBJS_DIR)/%.o: %.cpp $(HDRS)
 	
 all: $(NAME)
 
+test: 
+	./test.sh
+
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
@@ -25,6 +28,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f test_files/*.replace
 
 re: fclean all
 
