@@ -2,16 +2,16 @@
 make
 echo "-------DEBUG-------"
 ./karenFilter DEBUG
-echo "-------------------"
+echo 
 echo "-------INFO--------"
 ./karenFilter INFO
-echo "-------------------"
+echo 
 echo "------WARNING------"
 ./karenFilter WARNING
-echo "-------------------"
+echo 
 echo "-------ERROR-------"
 ./karenFilter ERROR
-echo "-------------------"
+echo 
 echo "-------TRASH-------"
 ./karenFilter "[ Probably complaining about insignificant problems ]"
 echo "-------------------"
