@@ -33,7 +33,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& clapTrap)
 
 void ClapTrap::attack( std::string const & target )
 {
-	std::cout << "Gloves are comin' off!. One, two... PUNCH!" << std::endl;
+	std::cout << "Gloves are comin' off! One, two... PUNCH!" << std::endl;
 	std::cout << "ClapTrap <" << this->_name << ">: attacks <"<< target << ">, causing [ " << this->_attackDamage << " ] points of damage!" << std::endl << std::endl;
 }
 
