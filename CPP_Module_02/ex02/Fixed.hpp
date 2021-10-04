@@ -21,7 +21,7 @@ class Fixed
 		Fixed();
 		Fixed( const int );
 		Fixed( const float );
-		Fixed( Fixed const & );
+		Fixed( const Fixed& );
 
 		Fixed&	operator= ( const Fixed& );
 

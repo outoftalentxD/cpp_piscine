@@ -17,9 +17,10 @@ Fixed::Fixed( const float value )
 
 Fixed::~Fixed()
 {
+	
 }
 
-Fixed::Fixed( Fixed const & fixed )
+Fixed::Fixed( const Fixed& fixed )
 {
 	*this = fixed;
 }
