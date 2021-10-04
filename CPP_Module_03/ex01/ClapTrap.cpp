@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap( std::string name )
 {
-	std::cout << "[ Constructor called ] Claptrap <" << name << ">: Does this mean I can start dancing? Pleeeeeeaaaaase?" << std::endl << std::endl; 
+	std::cout << "[ Constructor called ] ClapTrap <" << name << ">: Does this mean I can start dancing? Pleeeeeeaaaaase?" << std::endl << std::endl; 
 	this->_name = name;
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
@@ -11,7 +11,7 @@ ClapTrap::ClapTrap( std::string name )
 
 ClapTrap::~ClapTrap( )
 {
-	std::cout << "[ Destructor called ] Claptrap <" << this->_name << ">: Ahem, ahem. What's going on? Did I break something?" << std::endl << std::endl;
+	std::cout << "[ Destructor called ] ClapTrap <" << this->_name << ">: Ahem, ahem. What's going on? Did I break something?" << std::endl << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& clapTrap)
@@ -33,7 +33,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& clapTrap)
 
 void ClapTrap::attack( std::string const & target )
 {
-	std::cout << "Gloves are comin' off!. One, two... PUNCH!" << std::endl;
+	std::cout << "Gloves are comin' off! One, two... PUNCH!" << std::endl;
 	std::cout << "ClapTrap <" << this->_name << ">: attacks <"<< target << ">, causing [ " << this->_attackDamage << " ] points of damage!" << std::endl << std::endl;
 }
 
