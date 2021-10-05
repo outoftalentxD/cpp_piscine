@@ -10,7 +10,7 @@ FragTrap::FragTrap( std::string name) : ClapTrap(name)
 
 FragTrap::~FragTrap( )
 {
-	std::cout << "[ Destructor called ] ClapTrap <" << this->_name << ">: I'M DEAD I'M DEAD OHMYGOD I'M DEAD!" << std::endl << std::endl;
+	std::cout << "[ Destructor called ] FragTrap <" << this->_name << ">: I'M DEAD I'M DEAD OHMYGOD I'M DEAD!" << std::endl << std::endl;
 }
 
 FragTrap::FragTrap( const FragTrap& fragTrap) : ClapTrap( fragTrap )
