@@ -24,6 +24,12 @@ FragTrap&	FragTrap::operator=( const FragTrap& fragTrap)
 	return (*this);
 }
 
+void FragTrap::attack( std::string const & target)
+{
+	std::cout << "Is it dead? Can, can I open my eyes now?" << std::endl;
+	std::cout << "FragTrap <" << this->_name << ">: attacks <"<< target << ">, causing [ " << this->_attackDamage << " ] points of damage!" << std::endl << std::endl;
+}
+
 void FragTrap::highFivesGuys( void )
 {
 	std::cout << "<"<< this->_name << ">: Secret handshake!" << std::endl << std::endl;

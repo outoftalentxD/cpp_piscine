@@ -11,7 +11,6 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 ScavTrap::~ScavTrap( )
 {
 	std::cout << "[ Destructor called ] ScavTrap <" << this->_name << ">: Argh arghargh death gurgle gurglegurgle urgh... death." << std::endl << std::endl;
-
 }
 
 ScavTrap::ScavTrap( const ScavTrap& scavTrap) : ClapTrap (scavTrap)
@@ -26,6 +25,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 {
 	ClapTrap::operator=(scavTrap);
 	return (*this);
+}
+
+void	ScavTrap::attack( std::string const & target )
+{
+	std::cout << "Woohoo! In your face!" << std::endl;
+	std::cout << "ScavTrap <" << this->_name << ">: attacks <"<< target << ">, causing [ " << this->_attackDamage << " ] points of damage!" << std::endl << std::endl;
 }
 
 void	ScavTrap::guardGate( void )
