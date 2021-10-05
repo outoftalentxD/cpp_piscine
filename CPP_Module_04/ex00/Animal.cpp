@@ -2,7 +2,7 @@
 
 Animal::Animal( std::string type ) : _type(type) 
 {
-
+	std::cout << "[Constructor] Animal <" << type << ">" << std::endl;
 }
 
 Animal::Animal( const Animal& other ) : _type(other._type)
@@ -21,7 +21,7 @@ Animal&	Animal::operator=( const Animal& other )
 
 Animal::~Animal( )
 {
-	
+	std::cout << "[Destructor] Animal <" << this->_type << ">" << std::endl;
 }
 
 void	Animal::makeSound( void ) const

@@ -2,7 +2,7 @@
 
 Cat::Cat( std::string type ) : Animal( type )
 {
-
+	std::cout << "[Constructor] Cat <" << type << ">" << std::endl;
 }
 
 Cat::Cat( const Cat& other) : Animal ( other )
@@ -18,7 +18,7 @@ Cat&	Cat::operator=( const Cat& other )
 
 Cat::~Cat( )
 {
-	
+	std::cout << "[Destructor] Cat <" << this->_type << ">" << std::endl;
 }
 
 void	Cat::makeSound( void ) const

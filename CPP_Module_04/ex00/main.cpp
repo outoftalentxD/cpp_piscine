@@ -15,6 +15,9 @@ void right( void )
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+	delete i;
+	delete j;
+	delete meta;
 }
 
 void wrong( void )
@@ -24,6 +27,8 @@ void wrong( void )
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound(); //will output the animal sound!
 	meta->makeSound();
+	delete i;
+	delete meta;
 }
 
 int main( void )

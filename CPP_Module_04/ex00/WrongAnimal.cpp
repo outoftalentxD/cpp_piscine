@@ -2,7 +2,7 @@
 
 WrongAnimal::WrongAnimal( std::string type ) : _type(type) 
 {
-
+	std::cout << "[Constructor] WrongAnimal <" << type << ">" << std::endl;
 }
 
 WrongAnimal::WrongAnimal( const WrongAnimal& other ) : _type(other._type)
@@ -21,7 +21,7 @@ WrongAnimal&	WrongAnimal::operator=( const WrongAnimal& other )
 
 WrongAnimal::~WrongAnimal( )
 {
-	
+	std::cout << "[Destructor] WrongAnimal <" << this->_type << ">" << std::endl;
 }
 
 void	WrongAnimal::makeSound( void ) const

@@ -2,7 +2,7 @@
 
 Dog::Dog( std::string type ) : Animal( type )
 {
-
+	std::cout << "[Constructor] Dog <" << type << ">" << std::endl;
 }
 
 Dog::Dog( const Dog& other) : Animal ( other )
@@ -18,7 +18,7 @@ Dog&	Dog::operator=( const Dog& other )
 
 Dog::~Dog( )
 {
-	
+	std::cout << "[Destructor] Dog <" << this->_type << ">" << std::endl;
 }
 
 void	Dog::makeSound( void ) const
