@@ -24,10 +24,7 @@ ScavTrap::ScavTrap( const ScavTrap& scavTrap) : ClapTrap (scavTrap)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 {
-	this->_name = scavTrap._name;
-	this->_hitPoints = scavTrap._hitPoints;
-	this->_energyPoints = scavTrap._energyPoints;
-	this->_attackDamage = scavTrap._attackDamage;
+	ClapTrap::operator=(scavTrap);
 	return (*this);
 }
 
