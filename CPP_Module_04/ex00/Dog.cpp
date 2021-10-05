@@ -12,7 +12,8 @@ Dog::Dog( const Dog& other) : Animal ( other )
 
 Dog&	Dog::operator=( const Dog& other )
 {
-	Animal::operator=(other);
+	if (this != &other)
+		Animal::operator=(other);
 	return (*this);
 }
 
