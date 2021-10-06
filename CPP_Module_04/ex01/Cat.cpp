@@ -19,6 +19,7 @@ Cat&	Cat::operator=( const Cat& other )
 	if (this != &other)
 	{
 		Animal::operator=(other);
+		delete this->_brain;
 		if (other._brain)
 			this->_brain = new Brain(*other._brain);
 		else
