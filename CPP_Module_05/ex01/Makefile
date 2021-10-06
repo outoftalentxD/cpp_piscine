@@ -1,4 +1,4 @@
-NAME = Bureaucrats
+NAME = SignThatFormForTheGod
 
 CC = clang++
 
