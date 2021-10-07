@@ -18,6 +18,12 @@ RobotomyRequestForm& RobotomyRequestForm::operator= ( const RobotomyRequestForm&
 }
 
 void	RobotomyRequestForm::action( std::string target ) const
-{
-	std::cout << "ZrhzghzrhzrhzzrHZrhhzRHghzehhrzh <" << target << "> has been robotomized successfully 50% of the time." << std::endl;
+{	
+	static int state = 1;
+
+	if (state % 2)
+		std::cout << "*DRZZZzzz DRZZZzzz DRZZZzzz* <" << target << "> has been robotomized successfully" << std::endl;
+	else
+		std::cout << "<" << target << "> has been not robotomized. Failure" << std::endl;
+	state++;
 }

@@ -6,9 +6,9 @@
 
 int main( void )
 {
-	Form* someForm = new PresidentialPardonForm("melaena");
+	Form* someForm = new PresidentialPardonForm("Don Pardon");
 	Form* shrubbery = new ShrubberyCreationForm("garden");
-	RobotomyRequestForm robotomy("Robotomy!");
+	RobotomyRequestForm robotomy("Bender");
 	Bureaucrat melaena("melaena", 2);
 	Bureaucrat smallestCog("smallestCog", 145);
 	Bureaucrat shurebberMan("Shrubber", 130);
@@ -27,6 +27,8 @@ int main( void )
 		melaena.signForm(*someForm);
 		melaena.signForm(robotomy);
 		melaena.executeForm(*someForm);
+		melaena.executeForm(robotomy);
+		melaena.executeForm(robotomy);
 		melaena.executeForm(robotomy);
 		smallestCog.executeForm(*someForm);
 	}
