@@ -9,8 +9,17 @@ Form::Form( std::string name, int signRequiredGrade, int execRequiredGrade)
         throw Form::GradeTooHighException();    
 }
 
+Form::Form( std::string name, int signRequiredGrade, int execRequiredGrade, std::string target) 
+        : _name(name), _signRequiredGrade(signRequiredGrade), _execRequiredGrade(execRequiredGrade), _signed(false), _target(target)
+{
+    if (this->_signRequiredGrade > 150 || this->_execRequiredGrade > 150)
+        throw Form::GradeTooLowException();
+    else if (this->_signRequiredGrade < 1 || this->_execRequiredGrade < 1)
+        throw Form::GradeTooHighException();    
+}
+
 Form::Form( const Form& other )
-        : _name(other._name), _signRequiredGrade(other._signRequiredGrade), _execRequiredGrade(other._execRequiredGrade)
+        : _name(other._name), _signRequiredGrade(other._signRequiredGrade), _execRequiredGrade(other._execRequiredGrade), _target(other._target)
 {
     this->_signed = other._signed;
     if (this->_signRequiredGrade > 150 || this->_execRequiredGrade > 150)
@@ -23,7 +32,7 @@ Form& Form::operator=( const Form& other )
 {
     if (this != &other)
     {
-        std::cout << "const _name, and const _grades not changed. _signed changed succesfully" << std::endl;
+        std::cout << "const _name, _target and const _grades not changed. _signed changed succesfully" << std::endl;
         this->_signed = other._signed;
     }
     return (*this);
@@ -71,6 +80,11 @@ bool Form::getFormSignedState ( void ) const
     return (this->_signed);
 }
 
+std::string	Form::getTarget( void ) const
+{
+	return (this->_target);
+}
+
 void Form::beSigned( const Bureaucrat& bureaucrat )
 {
     if (this->_signRequiredGrade < bureaucrat.getGrade())
@@ -85,5 +99,5 @@ void Form::execute( Bureaucrat const & executor ) const
 		throw Form::FormNotSignedException();
 	if (executor.getGrade() > this->getExecRequiredGrade())
 		throw Form::GradeTooLowException();
-	this->action(executor.getName());
+	this->action(this->getTarget());
 }

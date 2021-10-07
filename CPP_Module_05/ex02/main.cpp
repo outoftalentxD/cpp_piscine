@@ -6,8 +6,8 @@
 
 int main( void )
 {
-	Form* someForm = new PresidentialPardonForm();
-	Form* shrubbery = new ShrubberyCreationForm();
+	Form* someForm = new PresidentialPardonForm("melaena");
+	Form* shrubbery = new ShrubberyCreationForm("garden");
 	RobotomyRequestForm robotomy("Robotomy!");
 	Bureaucrat melaena("melaena", 2);
 	Bureaucrat smallestCog("smallestCog", 145);

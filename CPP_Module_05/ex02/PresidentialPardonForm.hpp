@@ -6,7 +6,6 @@
 class PresidentialPardonForm : public Form
 {
 	private:
-		std::string _target;
 		PresidentialPardonForm& operator= ( const PresidentialPardonForm& other );
 	
 	public:

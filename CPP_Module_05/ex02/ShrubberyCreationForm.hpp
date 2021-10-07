@@ -7,7 +7,6 @@
 class ShrubberyCreationForm : public Form
 {
 	private:
-		std::string _target;
 		ShrubberyCreationForm& operator= ( const ShrubberyCreationForm& other );
 
 	public:
