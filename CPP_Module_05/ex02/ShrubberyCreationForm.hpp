@@ -7,12 +7,12 @@
 class ShrubberyCreationForm : public Form
 {
 	private:
+		std::string _target;
+		ShrubberyCreationForm& operator= ( const ShrubberyCreationForm& other );
 
 	public:
-	ShrubberyCreationForm( std::string name = "default Shrubbery" );
-
+	ShrubberyCreationForm( std::string target );
 	ShrubberyCreationForm( const ShrubberyCreationForm& other );
-	ShrubberyCreationForm& operator= ( const ShrubberyCreationForm& other );
 	virtual ~ShrubberyCreationForm() {};
 	
 	void action( std::string target ) const;

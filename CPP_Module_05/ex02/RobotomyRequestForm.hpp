@@ -6,12 +6,11 @@
 class RobotomyRequestForm : public Form
 {
 	private:
-
+		std::string _target;
+		RobotomyRequestForm& operator= ( const RobotomyRequestForm& other );
 	public:
-	RobotomyRequestForm( std::string name = "default Robotomy");
-
+	RobotomyRequestForm( std::string target );
 	RobotomyRequestForm( const RobotomyRequestForm& other );
-	RobotomyRequestForm& operator= ( const RobotomyRequestForm& other );
 	virtual ~RobotomyRequestForm() {};
 	
 	void action( std::string target ) const;
