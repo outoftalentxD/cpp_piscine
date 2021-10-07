@@ -30,7 +30,7 @@ class Form
 
         void beSigned( const Bureaucrat& bureaucrat );
 		void execute( Bureaucrat const & executor ) const;
-		virtual void action( std::string target ) const;
+		virtual void action( std::string target ) const = 0;
 
         class GradeTooLowException : public std::exception
         {

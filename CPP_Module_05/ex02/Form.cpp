@@ -79,12 +79,6 @@ void Form::beSigned( const Bureaucrat& bureaucrat )
         this->_signed = true;
 }
 
-void Form::action( std::string target ) const
-{
-	(void)target;
-	std::cout << "Default Form has no action" << std::endl;
-}
-
 void Form::execute( Bureaucrat const & executor ) const
 {	
 	if (!this->getFormSignedState())
