@@ -25,7 +25,6 @@ int main( void )
         std::cerr << e.what() << '\n';
     }
     
-    
     try
     {
         smallestCog.incrementGrade();
@@ -37,7 +36,7 @@ int main( void )
         smallestCog.signForm(largestForm);
         std::cout << "Bureaucrat <" << smallestCog.getName() << "> also can sign Form <" << largestForm.getName() << "> ";
         std::cout << "with grade: " << largestForm.getSignRequiredGrade() << std::endl;
-        
+		std::cout << largestForm << std::endl;
     }
     catch(const std::exception& e)
     {

@@ -29,6 +29,13 @@ Form& Form::operator=( const Form& other )
     return (*this);
 }
 
+std::ostream&	operator<< ( std::ostream& os, const Form& data )
+{
+	os << "<" << data.getName() << ">, form has signRequiredGrade = <" << data.getSignRequiredGrade() << ">, ";
+	os << "execRequiered Grade = <" << data.getExecRequiredGrade() << "> and signedState is " << data.getFormSignedState();
+	return (os);
+}
+
 const char * Form::GradeTooLowException::what() const throw ()
 {
     return ("Grade is too low");

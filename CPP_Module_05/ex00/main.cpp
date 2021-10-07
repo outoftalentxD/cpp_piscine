@@ -30,7 +30,8 @@ int main( void )
         smallestCog.incrementGrade();
         smallestCog.incrementGrade();
         std::cout << "Bureaucrat <" << smallestCog.getName() << ">: I live according the rules and got 4 raises in a row!" << std::endl;
-        std::cout << "Bureaucrat <" << smallestCog.getName() << "> grade is: " << smallestCog.getGrade() << std::endl;
+		std::cout << smallestCog << std::endl;
+		// std::cout << "Bureaucrat <" << smallestCog.getName() << "> grade is: " << smallestCog.getGrade() << std::endl;
     }
     catch(const std::exception& e)
     {

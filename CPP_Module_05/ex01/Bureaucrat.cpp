@@ -30,6 +30,12 @@ Bureaucrat& Bureaucrat::operator=( const Bureaucrat& other )
     return (*this);
 }
 
+std::ostream& operator<< ( std::ostream& os, const Bureaucrat& data )
+{
+	os << "<" << data.getName() << ">, bureaucrat grade <" << data.getGrade() << ">";
+	return (os);
+}
+
 int Bureaucrat::getHighestGrade( void ) const
 {
     return (Bureaucrat::_highestGrade);
