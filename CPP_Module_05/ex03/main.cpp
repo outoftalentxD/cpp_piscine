@@ -14,6 +14,12 @@ int main( void )
 		someForm = intern.makeForm("robotomy request", "Bender");
 		melaena.signForm(*someForm);
 		melaena.executeForm(*someForm);	
+		delete someForm;
+		someForm = intern.makeForm("shruberry tree", "garden");
+		melaena.signForm(*someForm);
+		melaena.executeForm(*someForm);
+		delete someForm;
+		someForm = intern.makeForm("persedental pordon", "DonPordon");	
 	}
 	catch(const std::exception& e)
 	{

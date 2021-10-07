@@ -1,11 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form("RobotomyRequestForm", 72, 45), _target(target)
+RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form("RobotomyRequestForm", 72, 45, target)
 {
 
 }
 
-RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& other ) : Form( other ), _target(other._target)
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& other ) : Form( other )
 {
 
 }
@@ -18,6 +18,12 @@ RobotomyRequestForm& RobotomyRequestForm::operator= ( const RobotomyRequestForm&
 }
 
 void	RobotomyRequestForm::action( std::string target ) const
-{
-	std::cout << "ZrhzghzrhzrhzzrHZrhhzRHghzehhrzh <" << target << "> has been robotomized successfully 50% of the time." << std::endl;
+{	
+	static int state = 1;
+
+	if (state % 2)
+		std::cout << "*DRZZZzzz DRZZZzzz DRZZZzzz* <" << target << "> has been robotomized successfully" << std::endl;
+	else
+		std::cout << "<" << target << "> has been not robotomized. Failure" << std::endl;
+	state++;
 }
