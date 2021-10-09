@@ -1,4 +1,4 @@
-NAME = serialization
+NAME = dynamic
 
 CC = clang++
 
