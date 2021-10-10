@@ -54,6 +54,6 @@ int main()
 	Base *base;
 
 	base = gen();
-	(base);
+	identify(base);
 	return (0);
 }
