@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <stdexcept>
 #include <exception>
 #include <algorithm>
@@ -11,5 +12,8 @@ int&	easyFind( T data, int elem)
 	if (iter == data.end())
 		throw std::invalid_argument("Not found");
 	else
-		return (*iter);
+	{
+		std::cout << "Elem: " << *iter << " Index: " << data.begin() - iter << std::endl;
+		return (data.begin() - iter);
+	}
 }
