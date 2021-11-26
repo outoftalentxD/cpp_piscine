@@ -13,6 +13,11 @@
   Description
   -----------
   
+  > CPP_Module_00
+    This first module of C++ is designed to help you understand basics ans some the specifities of C++
+  
+  > CPP_Module_01
+    This module is designed to help you understand the memory allocation, reference, pointers to members and the usage of the switch in C++
   
  
   
