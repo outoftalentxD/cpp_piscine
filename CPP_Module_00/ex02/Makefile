@@ -1,4 +1,4 @@
-NAME = ex02
+NAME = accountLog
 
 CC = clang++
 
