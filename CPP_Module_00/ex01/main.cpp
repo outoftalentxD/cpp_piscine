@@ -15,9 +15,7 @@ int main(void)
 		else if (line == "ADD")
 			phoneBook.getNewContact();
 		else if (line == "SEARCH")
-		{
 			phoneBook.printContacts();
-		}
 		else
 			std::cout << "[X] Error: 'ADD'/'EXIT'/'SEARCH' expected" << std::endl;
 		std::cout << "Enter new command:" << std::endl;

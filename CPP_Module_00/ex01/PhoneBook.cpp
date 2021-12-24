@@ -37,7 +37,7 @@ void PhoneBook::printContacts(void) const
 	std::cout << std::setw(10) << "first name" << "|";
 	std::cout << std::setw(10) << "last name" << "|";
 	std::cout << std::setw(10) << "nickname" << "|" << std::endl;
-	for (int i = 0; i < this->_contactsCount; i++)
+	for (int i = 0; i < this->_contactsCount && i < 8; i++)
 	{
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		std::cout << std::setw(10) << contactFormatString(this->_contacts[i].getFirstName()) << "|"; 
@@ -45,12 +45,10 @@ void PhoneBook::printContacts(void) const
 		std::cout << std::setw(10) << contactFormatString(this->_contacts[i].getNickname()) << "|" << std::endl;
 	}
 	std::cout << "Enter contact index: ";
-	if (!(std::cin >> index))
-	{
-		std::cout << "Wrong index" << std::endl;
-		return ;
-	}
-	else if (index < 1 || index > this->_contactsCount)
+	std::string command;
+	std::cin >> command;
+	index = command[0] - '0';
+	if (command.size() > 1 || index < 1 || index > this->_contactsCount)
 	{
 		std::cout << "Wrong index" << std::endl;
 		return ;
