@@ -1,4 +1,4 @@
-NAME = replace
+NAME = SedIsForLosers
 
 CC = clang++
 
