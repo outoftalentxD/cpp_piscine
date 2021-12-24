@@ -6,11 +6,11 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS_DIR = .
 HDRS_DIR = .
-OBJS_DIR = ./objects
+OBJS_DIR = ./objs
 
 SRCS = megaphone.cpp
 HDRS = 
-OBJS = $(addprefix objects/, $(notdir $(patsubst %.cpp, %.o, $(SRCS))))
+OBJS = $(addprefix objs/, $(notdir $(patsubst %.cpp, %.o, $(SRCS))))
 
 $(OBJS_DIR)/%.o: %.cpp $(HDRS)
 	$(CC) $(CFLAGS) -o $@ -c $<
