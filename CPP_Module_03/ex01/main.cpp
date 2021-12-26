@@ -3,12 +3,14 @@
 
 int main()
 {
-	ClapTrap clapTrap("Some Clap Trap");
-	ScavTrap scavTrap("melaena");
-	ScavTrap otherScavTrap = scavTrap;
-	
-	clapTrap.attack("target");
-	scavTrap.attack("scavTrap target");
-	scavTrap.guardGate();
+	{
+		ClapTrap clapTrap("Some Clap Trap");
+		ScavTrap scavTrap("melaena");
+		ScavTrap otherScavTrap = scavTrap;
+		
+		clapTrap.attack("target");
+		scavTrap.attack("scavTrap target");
+		scavTrap.guardGate();
+	}
 	return (0);
 }

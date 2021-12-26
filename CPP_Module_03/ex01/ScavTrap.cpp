@@ -11,15 +11,11 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 ScavTrap::~ScavTrap( )
 {
 	std::cout << "[ Destructor called ] ScavTrap <" << this->_name << ">: Argh arghargh death gurgle gurglegurgle urgh... death." << std::endl << std::endl;
-
 }
 
 ScavTrap::ScavTrap( const ScavTrap& scavTrap) : ClapTrap (scavTrap)
 {
-	this->_name = scavTrap._name;
-	this->_hitPoints = scavTrap._hitPoints;
-	this->_energyPoints = scavTrap._energyPoints;
-	this->_attackDamage = scavTrap._attackDamage;
+
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
