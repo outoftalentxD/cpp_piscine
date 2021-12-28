@@ -57,4 +57,5 @@ int main( void )
 	delete coolDog;
 	anotherDog->makeSound();
 	anotherDog->printIdeas(1, 5);
+	delete anotherDog;
 }
