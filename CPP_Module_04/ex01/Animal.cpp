@@ -40,3 +40,10 @@ void	Animal::printIdeas( int startPos, int endPos ) const
 	(void)endPos;
 	std::cout << "Not all animals has ideas :(" << std::endl;
 }
+
+void	Animal::setIdea( std::string idea, int pos )
+{
+	(void)idea;
+	(void)pos;
+	std::cout << "This type of animal have no brain, unfourtunate:(" << '\n';
+}

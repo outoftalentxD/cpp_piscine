@@ -2,7 +2,7 @@
 
 Brain::Brain( )
 {
-	std::cout << "God gave the brain!" << std::endl;
+	std::cout << "[Constructor] God gave the brain!" << std::endl;
 }
 
 Brain::Brain( const Brain& other )
@@ -20,7 +20,7 @@ Brain&	Brain::operator=( const Brain& other )
 
 Brain::~Brain( )
 {
-	std::cout << "Brain has been lost..." << std::endl;
+	std::cout << "[Destructor] Brain has been lost..." << std::endl;
 }
 
 void	Brain::setIdea( std::string idea, int position )

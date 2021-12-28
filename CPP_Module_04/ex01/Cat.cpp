@@ -31,6 +31,7 @@ Cat&	Cat::operator=( const Cat& other )
 Cat::~Cat( )
 {
 	std::cout << "[Destructor] Cat <" << this->_type << ">" << std::endl;
+	delete _brain;
 }
 
 void	Cat::makeSound( void ) const
@@ -45,12 +46,12 @@ void	Cat::printIdeas( int startPos, int endPos ) const
 		startPos = 0;
 	if (endPos >= 100)
 		endPos = 100;
-	for (int i = startPos; i < endPos; i++)
-		std::cout << this->_brain->getIdea(i) << std::endl;
-	std::cout << std::endl;
+	for (int i = startPos; i < endPos ; i++)
+		if (_brain->getIdea(i) != "")
+			std::cout << this->_brain->getIdea(i) << std::endl;
 }
 
-Brain&	Cat::evilGenius( void ) const
+void	Cat::setIdea( std::string idea, int pos )
 {
-	return (*this->_brain);
+	_brain->setIdea(idea, pos);
 }
