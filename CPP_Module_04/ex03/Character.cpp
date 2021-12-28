@@ -3,7 +3,7 @@
 Character::Character( const std::string& name ) : _name(name), _materiasCount(0)
 {
     for (int i = 0; i < 4; i++)
-        this->_inventory[i] = nullptr;
+        this->_inventory[i] = 0;
 }
 
 Character::Character( const Character& other )
@@ -14,7 +14,7 @@ Character::Character( const Character& other )
     for (i = 0; other._inventory[i] && i < 4; i++)
         this->_inventory[i] = other._inventory[i]->clone();
     for (; i < 4; i++)
-        this->_inventory[i] = nullptr;
+        this->_inventory[i] = 0;
 }
 
 Character& Character::operator= ( const Character& other )
@@ -34,7 +34,7 @@ Character& Character::operator= ( const Character& other )
         {
             if (this->_inventory[i])
                 delete this->_inventory[i];
-            this->_inventory[i] = nullptr;
+            this->_inventory[i] = 0;
         }
     }
     return (*this);
@@ -53,7 +53,7 @@ std::string const & Character::getName( void ) const
 
 void    Character::equip( AMateria *m )
 {
-    if (this->_materiasCount == 4)
+    if (this->_materiasCount == 4 || !m)
         return ;
     else
     {
@@ -68,7 +68,7 @@ void    Character::unequip( int idx )
         this->_inventory[i] = this->_inventory[i + 1];
     if (idx < this->_materiasCount)
     {
-        this->_inventory[this->_materiasCount] = nullptr;
+        this->_inventory[this->_materiasCount] = 0;
         this->_materiasCount--;
     }
 }

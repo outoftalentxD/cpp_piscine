@@ -3,7 +3,7 @@
 MateriaSource::MateriaSource( )
 {
     for (int i = 0; i < 4; i++)
-        this->_materials[i] = nullptr; 
+        this->_materials[i] = 0; 
 }
 
 MateriaSource::MateriaSource( const MateriaSource& other )
@@ -19,7 +19,7 @@ MateriaSource::MateriaSource( const MateriaSource& other )
     {
         if (this->_materials[i])
             delete this->_materials[i];
-        this->_materials[i] = nullptr;
+        this->_materials[i] = 0;
     }
 }
 
@@ -38,7 +38,7 @@ MateriaSource&  MateriaSource::operator=( const MateriaSource& other )
         {
             if (this->_materials[i])
                 delete this->_materials[i];
-            this->_materials[i] = nullptr;
+            this->_materials[i] = 0;
         }
     }
     return (*this);
@@ -70,5 +70,5 @@ AMateria*   MateriaSource::createMateria( std::string const & type )
         if (this->_materials[i]->getType() == type)
             return (this->_materials[i]->clone()); 
     }
-    return (nullptr);
+    return (0);
 }
