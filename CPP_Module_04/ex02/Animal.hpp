@@ -20,6 +20,7 @@ class Animal
 		virtual void	makeSound( void ) const = 0;
 		virtual std::string	getType( void ) const;
 		virtual void	printIdeas( int startPos, int endPos ) const;
+		virtual void	setIdea( std::string idea, int pos );
 };
 
 #endif

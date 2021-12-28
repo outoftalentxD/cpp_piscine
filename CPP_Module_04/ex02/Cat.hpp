@@ -18,8 +18,8 @@ class Cat : public Animal
 		~Cat( );
 
 		void	makeSound( void ) const;
-		Brain&	evilGenius( void ) const;
 		void	printIdeas( int startPos, int endPos ) const; 
+		void	setIdea( std::string idea, int pos );
 };
 
 #endif

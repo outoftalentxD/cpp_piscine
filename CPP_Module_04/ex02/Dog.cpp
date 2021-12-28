@@ -19,8 +19,7 @@ Dog&	Dog::operator=( const Dog& other )
 	if (this != &other)
 	{
 		Animal::operator=(other);
-		if (this->_brain)
-			delete this->_brain;
+		delete this->_brain;
 		if (other._brain)
 			this->_brain = new Brain(*other._brain);
 		else
@@ -47,12 +46,12 @@ void	Dog::printIdeas( int startPos, int endPos ) const
 		startPos = 0;
 	if (endPos >= 100)
 		endPos = 100;
-	for (int i = startPos; i < endPos; i++)
-		std::cout << this->_brain->getIdea(i) << std::endl;
-	std::cout << std::endl;
+	for (int i = startPos; i < endPos ; i++)
+		if (_brain->getIdea(i) != "")
+			std::cout << this->_brain->getIdea(i) << std::endl;
 }
 
-Brain&	Dog::evilGenius( void ) const
+void	Dog::setIdea( std::string idea, int pos )
 {
-	return (*this->_brain);
+	_brain->setIdea(idea, pos);
 }
