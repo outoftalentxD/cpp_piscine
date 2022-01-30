@@ -126,16 +126,17 @@ void Convert::setType( char * input )
 	
 	valueInt = std::strtoll(input, &endInt, 10);
 	valueDouble = std::strtod(input, &endDouble);
+	if (len < 2 && input[0])
+	{
+		this->_type = "char";
+		_content = static_cast<double>(input[0]);
+		return ;
+	}
 	this->_content = valueDouble;
 	if ((*endDouble && *endDouble != 'f') || (*endInt && *endInt != '.'))
 	{
 		this->_notDefaultType = 1;
 		this->_type = "impossible";
-		return ;
-	}
-	if (len < 2 && input[0])
-	{
-		this->_type = "char";
 		return ;
 	}
 	else if (!*endInt)
